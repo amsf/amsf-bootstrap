@@ -1,0 +1,18 @@
+# Theme facts
+meta:
+  name:         Bootstrap
+  url:          http://sparanoid.com/lab/amsf/theme-curtana.html
+  author:       Tunghsiao Liu
+  author_url:   http://sparanoid.com/
+  github:       https://github.com/amsf/amsf-bootstrap
+
+# Custom content
+sidebar:
+  about: Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+  links:
+    - title: Github
+      url: https://github.com/
+    - title: Twitter
+      url: https://twitter.com/
+    - title: Facebook
+      url: https://facebook.com/

@@ -1,0 +1,23 @@
+<!-- Main navigation with current page / categoriy highlighted -->
+<div class="blog-masthead">
+  <div class="container">
+    <nav class="blog-nav">
+      {% for item in site.data.nav %}
+        {% assign lowercased_title = item.title | downcase %}
+        <a class="blog-nav-item {% if page.permalink == item.url or page.category == lowercased_title %}active{% endif %}" href="{{ item.url | prepend: site.base }}">
+          {% if item.title == "__home__" %}
+            {{ site.name }}
+          {% else %}
+            {{ item.title }}
+          {% endif %}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title">{{ site.name }}</h1>
+    <p class="lead blog-description">{{ site.description }}</p>
+  </div>

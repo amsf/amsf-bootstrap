@@ -1,0 +1,21 @@
+<!-- Main content wrap -->
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    {{ content }}
+  </div>
+
+  <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    <div class="sidebar-module sidebar-module-inset">
+      <h4>About</h4>
+      <p>{{ site.data.bootstrap.sidebar.about }}</p>
+    </div>
+    <div class="sidebar-module">
+      <h4>Elsewhere</h4>
+      <ol class="list-unstyled">
+        {% for item in site.data.bootstrap.sidebar.links %}
+          <li><a href="{{ item.url | prepend: site.base }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</div>

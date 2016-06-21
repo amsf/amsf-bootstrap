@@ -1,0 +1,17 @@
+<!-- List snippets -->
+
+<!-- TODO: copied from `_amsf.html` -->
+{% if post.author %}
+  {% assign author = site.data.authors[post.author] %}
+{% else %}
+  {% assign author = site.data.authors["default"] %}
+{% endif %}
+
+<div class="blog-post">
+  <h2 class="blog-post-title"><a href="{{ post.url | prepend: site.base }}">{{ post.title }}</a></h2>
+  <p class="blog-post-meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    by <span rel="author">{{ author.name }}</span>
+  </p>
+  {{ post.content }}
+</div>

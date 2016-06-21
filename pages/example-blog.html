@@ -1,0 +1,11 @@
+---
+layout: page
+title: Blog Example
+permalink: /example-bootstrap-blog/
+hidden: true
+sitemap: false
+---
+
+{% for post in site.posts %}
+  {% include themes/{{ site.theme }}/includes/page-item.html %}
+{% endfor %}
